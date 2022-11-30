@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <title>Problem 1</title>
+</head>
+<body>
+    <div class="mainContent">
+        <header>
+            <h1>Phone Directory</h1>
+        </header>
+
+        <div class="addContactDetails">
+            <form onsubmit="contactDetailValidation(); return false;">
+                <input type="text" name="contact_Name" id="contactName" placeholder="Contact Name">
+                <input type="text" name="Mobile_Number" id="mobileNumber" placeholder="Mobile Number">
+                <input type="text" name="Email_Address" id="emailAddress" placeholder="Email Address">
+                <input type="submit" value="Add Contact">
+            </form>
+
+            <div id="error">
+                <p id="errorMessage1">Contact Name has not been entered</p>
+                <p id="errorMessage2">Mobile Number has not been entered</p>
+                <p id="errorMessage3">Email Address has not been entered</p>
+                <p id="errorMessage4">The Contact Name entered is not a valid. Please enter a name using only Alphabets and Spaces</p>
+                <p id="errorMessage5">Please enter a contact name that is less than or equal to 20 characters in length</p>
+                <p id="errorMessage6">The Mobile Number entered is not a valid. Please enter a mobile number using only Numbers</p>
+                <p id="errorMessage7">Please enter a mobile number that is equal to 10 characters in length</p>
+                <p id="errorMessage8">The Email Address entered is not a valid. Please enter a valid email address</p>
+                <p id="errorMessage9">Please enter an email address that is less than 40 characters in length</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="searchContact">
+            <label for="searchMobileNumber">Search Contact By Mobile Number</label>
+            <input type="text" name="Search_Mobile_Number" id="searchMobileNumber">
+        </div>
+
+        <br><br>
+
+        <h3>Contacts Summary</h3>
+        <table id="contactSummary">
+            <tr id="tableHeading">
+                <th onclick="sortTable()">Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+
+        </table>
+        
+        <div id="noResult">
+            <p>No Match Found</p>
+        </div>
+
+        <footer>
+            <p>C18423664 - Djibril Coulybaly</p>
+        </footer>
+    </div>
+    <script src="Assets/JavaScript/addContact.js"></script>
+    <script src="Assets/JavaScript/displayContactSummary.js"></script>
+    <script src="Assets/JavaScript/sortFilter.js"></script>
+</body>
+</html>
